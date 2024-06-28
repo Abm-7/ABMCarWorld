@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell Cars - Car Trading and Supplies</title>
+    <style>
+      .footer .list-unstyled a {
+        color: #ffffff;
+        transition: color 0.3s ease;
+      }
+
+      .footer .list-unstyled a:hover {
+        color: #007bff;
+      }
+
+      .footer .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        color: #ffffff;
+        transition: color 0.3s ease;
+      }
+
+      .footer .social-icons a:hover {
+        color: #007bff;
+      }
+      .footer img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Screenshot_2024-06-25_201757-removebg-preview.png"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Sell Your Car</h1>
+        <p class="lead">List your car for sale in just a few easy steps</p>
+      </div>
+    </header>
+
+    <!-- Sell Car Form -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center">Car Details</h2>
+        <form>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="make">Make</label>
+              <input
+                type="text"
+                class="form-control"
+                id="make"
+                placeholder="Make"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="model">Model</label>
+              <input
+                type="text"
+                class="form-control"
+                id="model"
+                placeholder="Model"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="year">Year</label>
+              <input
+                type="text"
+                class="form-control"
+                id="year"
+                placeholder="Year"
+                required
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="price">Price</label>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                placeholder="Price"
+                required
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="mileage">Mileage</label>
+              <input
+                type="text"
+                class="form-control"
+                id="mileage"
+                placeholder="Mileage"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              class="form-control"
+              id="description"
+              rows="3"
+              placeholder="Describe your car"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="photos">Upload Photos</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="photos"
+              multiple
+              required
+            />
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="contactName">Contact Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="contactName"
+                placeholder="Contact Name"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="contactEmail">Contact Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="contactEmail"
+                placeholder="Contact Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Contact Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="contactPhone"
+              placeholder="Contact Phone"
+              required
+            />
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">
+            Submit Listing
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>About Us</h5>
+            <p>
+              ABM Car World offers the best deals in car trading and supplies.
+              We provide a platform to buy, sell, and trade cars, along with
+              offering top-quality car wash supplies.
+            </p>
+            <img
+              src="Screenshot_2024-06-25_201757-removebg-preview.png"
+              alt="ABM Car World Logo"
+              class="img-fluid mt-3"
+              style="max-width: 150px"
+            />
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="buy_cars.html">Buy a Car</a></li>
+              <li><a href="sell_cars.html">Sell Your Car</a></li>
+              <li><a href="trade_cars.html">Trade Your Car</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Follow Us</h5>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p>&copy; 2024 ABM Car World. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Form fields
+          const make = document.getElementById("make").value.trim();
+          const model = document.getElementById("model").value.trim();
+          const year = document.getElementById("year").value.trim();
+          const price = document.getElementById("price").value.trim();
+          const mileage = document.getElementById("mileage").value.trim();
+          const description = document
+            .getElementById("description")
+            .value.trim();
+          const photos = document.getElementById("photos").files;
+          const contactName = document
+            .getElementById("contactName")
+            .value.trim();
+          const contactEmail = document
+            .getElementById("contactEmail")
+            .value.trim();
+          const contactPhone = document
+            .getElementById("contactPhone")
+            .value.trim();
+
+          // Validation
+          if (
+            !make ||
+            !model ||
+            !year ||
+            !price ||
+            !mileage ||
+            !description ||
+            photos.length === 0 ||
+            !contactName ||
+            !contactEmail ||
+            !contactPhone
+          ) {
+            alert("Please fill out all required fields.");
+            return;
+          }
+
+          // Success alert
+          alert("Your car listing has been submitted successfully!");
+
+          // Submit form if valid (optional if submitting to server)
+          // this.submit();
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Cars - Car Trading and Supplies</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Screenshot_2024-06-25_201757-removebg-preview.png"
+    />
+
+    <style>
+      .card {
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .footer .list-unstyled a {
+        color: #ffffff;
+        transition: color 0.3s ease;
+      }
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        height: 70%;
+        overflow: auto;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .footer .list-unstyled a:hover {
+        color: #007bff;
+      }
+      .footer .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        color: #ffffff;
+        transition: color 0.3s ease;
+      }
+      .footer .social-icons a:hover {
+        color: #007bff;
+      }
+      .footer img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Buy Cars</h1>
+        <p class="lead">Find your perfect car from our vast selection</p>
+      </div>
+    </header>
+
+    <!-- Search/Filter Bar -->
+    <section id="search" class="py-5 bg-light">
+      <div class="container">
+        <form>
+          <div class="form-row">
+            <div class="col-md-9 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="search-input"
+                placeholder="Make"
+              />
+            </div>
+            <div class="col-md-3 mb-3">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                id="search-button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Car Listings -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Car Listing 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://www.motortrend.com/uploads/sites/5/2017/10/2018-Toyota-Camry-XSE-front-three-quarter-in-motion-07-e1510268418873.jpg?w=768&width=768&q=75&format=webp"
+                class="card-img-top"
+                alt="Toyota Camry 2018"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Toyota Camry 2018</h5>
+                <p class="card-text">$20,000</p>
+                <p class="card-text">Make: Toyota, Model: Camry, Year: 2018</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://o.aolcdn.com/images/dims3/GLOB/crop/2500x1409+0+0/resize/800x450!/format/jpg/quality/85/https://s.yimg.com/os/creatr-uploaded-images/2019-04/76bfb9e0-5d64-11e9-b5f7-ce15cffca086"
+                class="card-img-top"
+                alt="Honda Accord 2019"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Honda Accord 2019</h5>
+                <p class="card-text">$25,000</p>
+                <p class="card-text">Make: Honda, Model: Accord, Year: 2019</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://cdn.dlron.us/static/dealer-14949/2020-Ford-Mustang.jpg"
+                class="card-img-top"
+                alt="Ford Mustang 2020"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ford Mustang 2020</h5>
+                <p class="card-text">$30,000</p>
+                <p class="card-text">Make: Ford, Model: Mustang, Year: 2020</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/17q2/678295/2017-chevrolet-impala-review-car-and-driver-photo-685005-s-original.jpg"
+                class="card-img-top"
+                alt="Chevrolet Impala 2017"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chevrolet Impala 2017</h5>
+                <p class="card-text">$18,000</p>
+                <p class="card-text">
+                  Make: Chevrolet, Model: Impala, Year: 2017
+                </p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://images.cars.com/cldstatic/wp-content/uploads/img-2072148792-1499101080878.jpg"
+                class="card-img-top"
+                alt="BMW 3 Series 2018"
+              />
+              <div class="card-body">
+                <h5 class="card-title">BMW 3 Series 2018</h5>
+                <p class="card-text">$35,000</p>
+                <p class="card-text">Make: BMW, Model: 3 Series, Year: 2018</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://cdn-images.fleetnews.co.uk/thumbs/1400x1000/web-clean/1/audi-a4-facelift-first-drive/audia4pi14.jpg"
+                class="card-img-top"
+                alt="Audi A4 2019"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Audi A4 2019</h5>
+                <p class="card-text">$40,000</p>
+                <p class="card-text">Make: Audi, Model: A4, Year: 2019</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 7 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://i.pinimg.com/originals/b5/1e/62/b51e621920a8052c6024a54a730a39a6.jpg"
+                class="card-img-top"
+                alt="Mercedes-Benz C-Class 2018"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Mercedes-Benz C-Class 2018</h5>
+                <p class="card-text">$45,000</p>
+                <p class="card-text">
+                  Make: Mercedes-Benz, Model: C-Class, Year: 2018
+                </p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 8 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://media.ed.edmunds-media.com/lexus/nx-300/2018/oem/2018_lexus_nx-300_4dr-suv_base_fq_oem_2_1600.jpg"
+                class="card-img-top"
+                alt="Lexus NX 2018"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lexus NX 2018</h5>
+                <p class="card-text">$50,000</p>
+                <p class="card-text">Make: Lexus, Model: NX, Year: 2018</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+          <!-- Car Listing 9 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                src="https://www.thecarconnection.com/images/sized/2020-mazda-cx-5_100703977_s-1440x961.jpg"
+                class="card-img-top"
+                alt="Mazda CX-5 2020"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Mazda CX-5 2020</h5>
+                <p class="card-text">$28,000</p>
+                <p class="card-text">Make: Mazda, Model: CX-5, Year: 2020</p>
+                <a href="#" class="btn btn-primary mt-auto">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>
+              We are a leading car trading platform dedicated to providing the
+              best deals on cars.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li>Email: contact@buycars.com</li>
+              <li>Phone: +1 234 567 890</li>
+              <li>Address: 1234 Main St, Anytown, USA</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <img
+          src="Screenshot_2024-06-25_201757-removebg-preview.png"
+          alt="Logo"
+          class="mt-3"
+        />
+        <p class="mt-2">&copy; 2024 Buy Cars. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
